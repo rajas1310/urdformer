@@ -1,0 +1,14 @@
+Looking in links: https://download.openmmlab.com/mmcv/dist/cu121/torch2.5.0/index.html
+Could not fetch URL https://download.openmmlab.com/mmcv/dist/cu121/torch2.5.0/index.html: There was a problem confirming the ssl certificate: HTTPSConnectionPool(host='download.openmmlab.com', port=443): Max retries exceeded with url: /mmcv/dist/cu121/torch2.5.0/index.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1147)'))) - skipping
+Collecting mmcv-full
+  Using cached mmcv_full-1.7.2-cp39-cp39-linux_x86_64.whl
+Requirement already satisfied: addict in /home/rajas/miniconda3/envs/urdformer/lib/python3.9/site-packages (from mmcv-full) (2.4.0)
+Requirement already satisfied: numpy in /home/rajas/miniconda3/envs/urdformer/lib/python3.9/site-packages (from mmcv-full) (1.26.4)
+Requirement already satisfied: packaging in /home/rajas/miniconda3/envs/urdformer/lib/python3.9/site-packages (from mmcv-full) (24.2)
+Requirement already satisfied: Pillow in /home/rajas/miniconda3/envs/urdformer/lib/python3.9/site-packages (from mmcv-full) (11.3.0)
+Requirement already satisfied: pyyaml in /home/rajas/miniconda3/envs/urdformer/lib/python3.9/site-packages (from mmcv-full) (6.0.2)
+Requirement already satisfied: yapf in /home/rajas/miniconda3/envs/urdformer/lib/python3.9/site-packages (from mmcv-full) (0.43.0)
+Requirement already satisfied: platformdirs>=3.5.1 in /home/rajas/miniconda3/envs/urdformer/lib/python3.9/site-packages (from yapf->mmcv-full) (4.3.8)
+Requirement already satisfied: tomli>=2.0.1 in /home/rajas/miniconda3/envs/urdformer/lib/python3.9/site-packages (from yapf->mmcv-full) (2.2.1)
+Installing collected packages: mmcv-full
+Successfully installed mmcv-full-1.7.2

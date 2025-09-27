@@ -183,10 +183,10 @@ def process_prediction(part_meshes, part_positions_starts, part_positions_ends, 
     return pred_data
 
 
-def get_texture(scene):
+def get_texture(scene, image_path):
     
     if scene=="kitchen":
-        for img_path in glob.glob("images/*"):
+        for img_path in glob.glob(f"{image_path}/*"):
             image_global = np.array(Image.open(img_path).convert("RGB"))
 
             test_name = os.path.basename(img_path)[:-4]
@@ -236,7 +236,7 @@ def get_texture(scene):
 
                 load_kitchen_texture(cropped_image, test_name, mesh_id, bbox_parts)
     else:
-        for img_path in glob.glob("images/*"):
+        for img_path in glob.glob(f"{image_path}/*"):
             print('image path', img_path)
             test_name = os.path.basename(img_path)[:-4]
             #############################################
@@ -252,6 +252,7 @@ def get_texture(scene):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('-scene_type', '--scene_type', default='object', type=str)
+    parser.add_argument('-image_path', '--image_path', default='images', type=str)
     args = parser.parse_args()
 
-    get_texture(args.scene)
+    get_texture(args.scene_type, args.image_path)

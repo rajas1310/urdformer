@@ -613,7 +613,7 @@ def evaluate(args, with_texture=False, headless = False):
     checkpoint = torch.load(part_checkpoint)
     urdformer_part.load_state_dict(checkpoint['model_state_dict'])
 
-    for img_path in glob.glob(input_path+"/*"):
+    for img_path in glob.glob(input_path+"/*.jpg"):
         p.resetSimulation()
         test_name = os.path.basename(img_path)[:-4]
 
@@ -628,7 +628,7 @@ def main():
     parser.add_argument('--texture', action='store_true', help='adding texture')
     parser.add_argument('--headless', action='store_true', help='option to run in headless mode')
     parser.add_argument('--scene_type', '--scene_type', default='cabinet', type=str)
-    parser.add_argument('--image_path', '--image_path', default='images', type=str)
+    parser.add_argument('-image_path', '--image_path', default='images', type=str)
     parser.add_argument('--random', '--random', action='store_true', help='use random meshes from partnet?')
 
     ##################### IMPORTANT! ###############################

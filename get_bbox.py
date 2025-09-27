@@ -214,7 +214,7 @@ def evaluate(args, detection_args):
         os.makedirs(f"{manual_dir}/parts/labels", exist_ok=True)
         os.makedirs(f"{manual_dir}/parts/labels_filtered", exist_ok=True)
         os.makedirs(f"{manual_dir}/parts/labels_manual", exist_ok=True)
-        for each_img_path in glob.glob('images/*'):
+        for each_img_path in glob.glob(f"{input_path}/*"):
             label_name = os.path.basename(each_img_path)[:-4]
             each_global_label = f"grounding_dino/labels_manual/{label_name}.npy"
             global_data = np.load(each_global_label, allow_pickle=True).item()
